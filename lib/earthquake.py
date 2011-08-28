@@ -30,10 +30,12 @@ class Manager:
         if(len(kwargs.keys()) == 1):
             assert kwargs.get("service"), "Service is the only accepted key in input"
             self.__service = kwargs.get("service")
-            self.proxyService = Proxy()
+        self.proxyService = Proxy()
+        self.parser = Parser()
     def request(self):
-        res = self.proxyService.makeRequest()
-        raise Exception("Not implemented yet!")
+        response = self.proxyService.makeRequest()
+        result = self.parser.parse(response)
+        return result
 
 class Proxy:
     __addressEndpoint = "http://earthquake.usgs.gov/earthquakes/catalogs/eqs7day-M1.txt"
