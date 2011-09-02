@@ -1,0 +1,14 @@
+Brownie==0.5.1
+PyYAML==3.10
+argh==0.14.0
+autonose==0.2.1
+distribute==0.6.15
+nose==1.1.2
+paragram==0.1.2
+pathtools==0.1.2
+python-termstyle==0.1.10
+simplejson==2.2.0
+snakefood==1.4
+watchdog==0.5.4
+wsgiref==0.1.2
+yolk==0.4.1
