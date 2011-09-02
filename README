@@ -1,0 +1,23 @@
+Version: 0.0.0.1 Alpha Beta Gamma :)
+Note: The library is still in development...
+
+This library retrieve real-time, worldwide information about earthquake in the last 7 days. The retrieved data is available on data.gov.
+
+How can I use it?
+from lib.earthquake import Earthquake
+ea = Earthquake()
+
+#It will return a json file
+json = ea.refresh()
+
+#You can also request a list of EarthquakeItem using:
+from lib.earthquake import Earthquake, EarthquakeItem
+items = ea.refresh("list")
+
+Requirements
+You can find the required libraries in requirements.txt.
+
+virtualenv --no-site-packages envname(*) 
+pip install -E envname -r requirements.txt
+
+(*) Change "envname" with whatever name you prefer.
