@@ -9,9 +9,9 @@ class EarthquakeItemTestCase(unittest.TestCase):
     def test_src_attribute_is_a_string(self):
         self.assertTrue(type(self.item.src) == type(''), "The src attribute is a string")
     def test_item_contains_a_equid_attribute(self):
-        self.assertFalse(callable(getattr(self.item, "equid")), "The EarthquakeItem contains a equid attribute")
+        self.assertFalse(callable(getattr(self.item, "eqid")), "The EarthquakeItem contains a equid attribute")
     def test_equid_attribute_is_an_integer(self):
-        self.assertTrue(type(self.item.equid) == type(1), "The equid attribute is an integer")
+        self.assertTrue(type(self.item.eqid) == type(1), "The equid attribute is an integer")
     def test_item_contains_a_version_attribute(self):
         self.assertFalse(callable(getattr(self.item, "version")), "The EarthquakeItem contains a version attribute")
     def test_version_attribute_is_an_integer(self):
@@ -51,4 +51,5 @@ class EarthquakeItemTestCase(unittest.TestCase):
         newItem = EarthquakeItem(**values)
         self.assertEqual("ci" , newItem.src, "The constructor works fine.")  
     
-     
+    def test_item_contains_setDate_method(self):
+        self.assertTrue(callable(getattr(self.item,"setDate")),"The item contains a setDateMethod") 
