@@ -1,7 +1,7 @@
 Version: 0.0.0.1 Alpha Beta Gamma :)
 Note: The library is still in development...
 
-This library retrieve real-time, worldwide information about earthquake in the last 7 days. The retrieved data is available on data.gov.
+This library retrieve real-time, worldwide information about earthquakes in the last 7 days. The retrieved data is available on data.gov.
 
 How can I use it?
 from lib.earthquake import Earthquake
